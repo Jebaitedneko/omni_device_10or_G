@@ -20,6 +20,7 @@
 
 /sdcard1        auto      /dev/block/mmcblk1p1                               	flags=display="MicroSD";storage;wipeingui;removable
 /usb-otg        auto      /dev/block/sda1                                    	flags=display="USB Storage";storage;wipeingui;removable
+/devices/soc/7000000.ssusb/7000000.dwc3/xhci-hcd.0.auto*     			auto	auto    defaults	wait,voldmanaged=usb:auto
 
 # Bootloader
 /aboot		emmc	  /dev/block/bootdevice/by-name/aboot	             	flags=backup=1;display="Bootloader"
