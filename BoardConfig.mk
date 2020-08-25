@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/mido
+LOCAL_PATH := device/10or/G
 
 # Architecture
 TARGET_ARCH := arm64
@@ -46,7 +46,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TW_CRYPTO_SYSTEM_VOLD_MOUNT := system vendor cust
+TW_CRYPTO_SYSTEM_VOLD_MOUNT := system vendor
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -55,16 +55,9 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
-ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_CONFIG := mido-fox_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mido
-else
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
-endif
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
@@ -109,4 +102,3 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
-#
