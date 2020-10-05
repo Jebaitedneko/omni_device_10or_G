@@ -10,7 +10,7 @@
 /system         ext4      /dev/block/bootdevice/by-name/system               flags=display="System";backup=1;wipeingui
 /data           ext4      /dev/block/bootdevice/by-name/userdata             flags=length=-16384;encryptable=footer;fileencryption=ice:aes-256-heh
 /storage        ext4      /data/media/0                  		     flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
-/vendor         ext4      /dev/block/bootdevice/by-name/vendor                 flags=display="Vendor/Cust";backup=1;wipeingui
+/vendor         ext4      /dev/block/bootdevice/by-name/vendor                 flags=display="Vendor";backup=1;wipeingui
 /persist_image  emmc      /dev/block/bootdevice/by-name/persist              flags=display="Persist Image";backup=1;flashimg=1
 /persist        ext4      /dev/block/bootdevice/by-name/persist              flags=display="Persist";backup=0
 /splash         emmc      /dev/block/bootdevice/by-name/splash               flags=display="Boot Logo";backup=1;flashimg=1
@@ -39,6 +39,3 @@
 #
 /sdcard1        auto      /dev/block/mmcblk1p1                               flags=display="MicroSD";storage;wipeingui;removable
 /usb-otg        auto      /dev/block/sda1                                    flags=display="USB Storage";storage;wipeingui;removable
-#
-/vendor         	ext4      /dev/block/bootdevice/by-name/vendor       	     flags=display="Cust";backup=0
-#

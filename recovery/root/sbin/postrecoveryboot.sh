@@ -15,10 +15,12 @@
 #
 # 	This software is released under GPL version 3 or any later version.
 #	See <http://www.gnu.org/licenses/>.
-# 	
+#
 # 	Please maintain this if you use this script or any part of it
 
-echo "0" > /sys/class/leds/led:torch_1/max_brightness
-echo "0" > /sys/class/leds/torch-light1/max_brightness
-echo "0" > /sys/class/leds/led:flash_1/max_brightness
+# echo "0" > "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:flash_0/max_brightness"
+# echo "0" > "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:flash_1/max_brightness"
+# echo "0" > "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness"
+# echo "0" > "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness"
+
 ln -s /dev/block/bootdevice/by-name/vendor /dev/block/bootdevice/by-name/cust
