@@ -31,6 +31,9 @@
 	export FOX_REPLACE_TOOLBOX_GETPROP=1
 	export OF_CHECK_OVERWRITE_ATTEMPTS=1
 	export FOX_USE_UNZIP_BINARY=1
+	export FOX_USE_GREP_BINARY=1
+	export FOX_USE_XZ_UTILS=1
+	export OF_USE_HEXDUMP=1
 	# export OF_DISABLE_DM_VERITY_FORCED_ENCRYPTION=1; # disabling dm-verity causes stability issues with some kernel 4.9 ROMs; but is needed for MIUI
 	# export OF_DISABLE_FORCED_ENCRYPTION=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
@@ -49,7 +52,6 @@
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
         # -- add settings for R11 --
-        export FOX_R11=1
         export FOX_ADVANCED_SECURITY=1
         export OF_USE_TWRP_SAR_DETECT=1
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
